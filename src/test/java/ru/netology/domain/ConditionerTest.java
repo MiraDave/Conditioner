@@ -23,7 +23,18 @@ public class ConditionerTest {
         condition.setOn(true);
         condition.setCurrentTemperature(25);
         condition.increaseCurrentTemperature();
-        assertEquals(17, condition.getCurrentTemperature());
+        assertEquals(26, condition.getCurrentTemperature());
+    }
 
+    @Test
+    public void decreaseCurrrentTemperature(){
+        Conditioner condition = new Conditioner();
+        condition.setName("BlahBlah");
+        condition.setMaxTemperature(30);
+        condition.setMinTemperature(30);
+        condition.setOn(true);
+        condition.setCurrentTemperature(25);
+        condition.decreaseCurrentTemperature();
+        assertEquals(24, condition.getCurrentTemperature());
     }
 }

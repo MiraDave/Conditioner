@@ -61,4 +61,3 @@ public class Conditioner {
         this.on = on;
     }
 }
-
